@@ -1,0 +1,35 @@
+<script>
+  number = prompt("enter the number");
+  primesum = 0;
+  nonprimesum = 0;
+  for (num of number) {
+    if (num > 1) {
+      count = 0;
+      for (i = 2; i < num; i++) {
+        if (num % i == 0) {
+          // console.log("it is not a prime number")
+          count++;
+          break;
+        }
+      }
+      // console.log(i)
+      if (!count) {
+        primesum += Number(num);
+      }
+      if (count) {
+        nonprimesum += Number(num);
+      }
+    }
+  }
+  console.log(primesum);
+  console.log(nonprimesum);
+  // else{
+  //   console.log("non prime is bigger")
+  // }
+  if (primesum > nonprimesum) {
+    console.log("prime sum is bigger");
+  }
+  if (nonprimesum > primesum) {
+    console.log("non prime sum is bigger");
+  }
+</script>
